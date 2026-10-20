@@ -3,24 +3,18 @@
 ### HTML
 
 - Boiler plate
-- Text formatting using HTML
-- Paragraph and Heading tags
-- Image and anchor tag
-- Multi-media tags
-- Tables
-- List
-- Forms
+- Heading and Paragraph
+- Text formatting
+- Images, Links and Multi-media tags
+- Tables and List
+- Forms (Dynamic Data)
 - Containers (div and span)
 
 ### CSS
 
-- Types of CSS
-- Types of selectors
-- Text formatting using CSS
-- Box Model
-- Backgrounds
-- Display (inline, block, inline-block)
-- Flex
-- Grid
+- Types of CSS and selectors
+- Text formatting
+- Box Model and Backgrounds
+- Display (Flex and Grid)
 - Positions
 - Responsivness
