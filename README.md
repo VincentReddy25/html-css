@@ -1,4 +1,7 @@
-# HTML
+# Syllabus
+
+### HTML
+
 - Boiler plate
 - Text formatting using HTML
 - Paragraph and Heading tags
@@ -9,7 +12,8 @@
 - Forms
 - Containers (div and span)
 
-# CSS
+### CSS
+
 - Types of CSS
 - Types of selectors
 - Text formatting using CSS
@@ -19,4 +23,4 @@
 - Flex
 - Grid
 - Positions
-- Responsivness 
+- Responsivness
