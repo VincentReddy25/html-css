@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | My Portfolio</title>
+  </head>
+  <body>
+    <header>
+      <h1>My Portfolio</h1>
+      <nav>
+        <a href="index.html">Home</a> |
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h2>Contact Me</h2>
+        <p>
+          Have a project in mind or just want to say hello? Send me a message.
+        </p>
+
+        <form action="#" method="post">
+          <p>
+            <label for="name">Full name:</label><br />
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Your name"
+              required
+            />
+          </p>
+
+          <p>
+            <label for="email">Email:</label><br />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="you@example.com"
+              required
+            />
+          </p>
+
+          <p>
+            <label for="phone">Phone (optional):</label><br />
+            <input type="tel" id="phone" name="phone" />
+          </p>
+
+          <p>
+            <label for="topic">What is this about?</label><br />
+            <select id="topic" name="topic">
+              <option value="project">Project inquiry</option>
+              <option value="job">Job opportunity</option>
+              <option value="feedback">Feedback</option>
+              <option value="other">Something else</option>
+            </select>
+          </p>
+
+          <fieldset>
+            <legend>How should I reply?</legend>
+            <input
+              type="radio"
+              id="reply-email"
+              name="reply"
+              value="email"
+              checked
+            />
+            <label for="reply-email">Email</label>
+            <input type="radio" id="reply-phone" name="reply" value="phone" />
+            <label for="reply-phone">Phone</label>
+          </fieldset>
+
+          <p>
+            <label for="message">Message:</label><br />
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              cols="40"
+              required
+            ></textarea>
+          </p>
+
+          <button type="submit">Send Message</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 My Portfolio</p>
+    </footer>
+  </body>
+</html>

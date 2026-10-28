@@ -2,35 +2,83 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>My First Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home | My Portfolio</title>
   </head>
   <body>
-    <h1>Hello, I'm [your name]</h1>
-    <p>This is my first web page. I'm learning <strong>HTML</strong>.</p>
+    <header>
+      <h1>My Portfolio</h1>
+      <nav>
+        <a href="index.html">Home</a> |
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
 
-    <!-- Put a picture named photo.jpg in the same folder as this file -->
-    <img src="photo.jpg" alt="A photo of me" width="200" />
+    <main>
+      <section>
+        <h2>Hello, I'm [your name]</h2>
+        <p>This is my first web page. I'm learning <strong>HTML</strong>.</p>
 
-    <hr />
+        <!-- Put a picture named photo.jpg in the same folder as this file -->
+        <img src="photo.jpg" alt="A photo of me" width="200" />
+      </section>
 
-    <h2>My Hobbies</h2>
-    <ul>
-      <li>Reading</li>
-      <li>Cricket</li>
-      <li>Listening to music</li>
-    </ul>
+      <hr />
 
-    <h2>My Top 3 Movies</h2>
-    <ol>
-      <li>Movie one</li>
-      <li>Movie two</li>
-      <li>Movie three</li>
-    </ol>
+      <section>
+        <h2>My Hobbies</h2>
+        <ul>
+          <li>Reading</li>
+          <li>Cricket</li>
+          <li>Listening to music</li>
+        </ul>
+      </section>
 
-    <h2>Useful Links</h2>
-    <p>
-      <a href="https://developer.mozilla.org">MDN Web Docs</a><br />
-      <a href="https://www.w3schools.com/html/">W3Schools HTML Tutorial</a>
-    </p>
+      <section>
+        <h2>My Top 3 Movies</h2>
+        <ol>
+          <li>Movie one</li>
+          <li>Movie two</li>
+          <li>Movie three</li>
+        </ol>
+      </section>
+
+      <section>
+        <h2>My Skills</h2>
+        <table border="1">
+          <caption>
+            What I'm learning
+          </caption>
+          <thead>
+            <tr>
+              <th>Skill</th>
+              <th>Level</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>HTML</td>
+              <td>Beginner</td>
+            </tr>
+            <tr>
+              <td>CSS</td>
+              <td>Just starting</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <h2>Useful Links</h2>
+        <p>
+          <a href="https://developer.mozilla.org">MDN Web Docs</a><br />
+          <a href="https://www.w3schools.com/html/">W3Schools HTML Tutorial</a>
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 My Portfolio</p>
+    </footer>
   </body>
 </html>
