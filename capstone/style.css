@@ -3,7 +3,8 @@
 /* Applies to the whole page */
 body {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 18px;
+    font-size: 1.125rem;
+    /* 18px, but scales with the user's browser settings */
     line-height: 1.6;
     color: #333333;
     background-color: #f5f7fa;
@@ -331,4 +332,78 @@ nav a {
 nav a:hover {
     opacity: 0.75;
     text-decoration: none;
+}
+
+
+/* ===== Day 8: Responsive design ===== */
+
+/* Images never overflow their container */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Tablets and smaller (screens up to 768px wide) */
+@media (max-width: 768px) {
+    header {
+        padding: 16px 20px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero {
+        padding: 40px 20px;
+    }
+
+    .hero h2 {
+        font-size: 1.75rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    .card {
+        padding: 18px;
+    }
+
+    /* Featured project goes back to one column wide */
+    .project:first-child {
+        grid-column: span 1;
+    }
+}
+
+/* Phones (screens up to 480px wide) */
+@media (max-width: 480px) {
+
+    /* Stack the header: title on top, nav below */
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Gallery becomes a single column */
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    /* Cards in the row stack vertically */
+    .card-row {
+        flex-direction: column;
+    }
+
+    /* Table scrolls sideways instead of breaking the page */
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    /* Easier to tap */
+    button,
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
 }
