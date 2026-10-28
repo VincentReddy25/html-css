@@ -240,3 +240,95 @@ nav {
 .project:first-child {
     grid-column: span 2;
 }
+
+
+/* ===== Day 7: Polish (backgrounds, shadows, transitions, positioning) ===== */
+
+/* Sticky header: stays at the top while scrolling */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    /* stays above other content */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Hero section with a gradient background */
+.hero {
+    background: linear-gradient(135deg, #1a3c6e, #1a73e8);
+    color: #ffffff;
+    text-align: center;
+    padding: 60px 24px;
+    border-radius: 10px;
+    margin-bottom: 24px;
+}
+
+.hero h2 {
+    color: #ffffff;
+    font-size: 36px;
+    margin: 0 0 10px 0;
+}
+
+.hero p {
+    font-size: 20px;
+    margin: 0 0 24px 0;
+}
+
+/* Reusable button style for links and <button> */
+.btn {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #1a3c6e;
+    font-weight: bold;
+    padding: 12px 28px;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+    text-decoration: none;
+    transform: translateY(-3px);
+    /* lifts up slightly */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+}
+
+/* Smooth hover on the form button */
+button {
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #1558b0;
+    transform: translateY(-2px);
+}
+
+/* Cards: soft shadow, lift on hover */
+.card {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Project tiles: highlight on hover */
+.project {
+    transition: background-color 0.2s ease;
+}
+
+.project:hover {
+    background-color: #e3ecf9;
+}
+
+/* Smooth color change on nav links */
+nav a {
+    transition: opacity 0.2s ease;
+}
+
+nav a:hover {
+    opacity: 0.75;
+    text-decoration: none;
+}
