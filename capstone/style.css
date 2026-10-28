@@ -163,3 +163,80 @@ button {
     font-size: 16px;
     cursor: pointer;
 }
+
+
+/* ===== Day 5: Flexbox ===== */
+
+/* Header: title on the left, nav on the right */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Nav: links in a row with a gap between them */
+nav {
+    display: flex;
+    gap: 24px;
+}
+
+/* Row of cards: side by side, equal width, wrap when too narrow */
+.card-row {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.card-row .card {
+    flex: 1;
+    /* each card shares the row equally */
+    min-width: 250px;
+    /* wrap to a new line below this width */
+}
+
+
+/* ===== Day 6: CSS Grid ===== */
+
+/* Responsive gallery: as many 200px+ columns as fit, sharing space equally */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.project {
+    background-color: #f5f7fa;
+    border-radius: 8px;
+    padding: 12px;
+}
+
+.project h3 {
+    margin: 12px 0 6px 0;
+    color: #1a3c6e;
+}
+
+.project p {
+    margin: 0;
+    font-size: 16px;
+}
+
+/* Placeholder for a screenshot: replace with <img> later */
+.project-image {
+    aspect-ratio: 4 / 3;
+    background-color: #cfd8e6;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1a3c6e;
+    font-weight: bold;
+}
+
+/* Make the first project span two columns: a "featured" look */
+.project:first-child {
+    grid-column: span 2;
+}
