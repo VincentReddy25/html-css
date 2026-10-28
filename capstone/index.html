@@ -3,127 +3,169 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home | My Portfolio</title>
+    <title>Home | Your Name</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
-      <h1>My Portfolio</h1>
+      <a class="logo" href="index.html">Your Name</a>
       <nav>
         <a href="index.html">Home</a>
+        <a href="#projects">Projects</a>
         <a href="contact.html">Contact</a>
       </nav>
     </header>
 
     <main>
       <section class="hero">
-        <h2>Beginner Web Developer</h2>
-        <p>I build simple, clean web pages with HTML and CSS.</p>
-        <a class="btn" href="contact.html">Contact me</a>
+        <p class="small-label">Beginner Web Developer</p>
+        <h1>Hi, I'm Your Name.</h1>
+        <p>
+          I build clean, simple and responsive websites, and I'm always learning
+          something new.
+        </p>
+        <a class="button" href="contact.html">Get in touch</a>
+        <a class="button button-outline" href="#projects">See my work</a>
       </section>
 
-      <section class="card">
-        <h2>Hello, I'm [your name]</h2>
-        <p>This is my first web page. I'm learning <strong>HTML</strong>.</p>
-
-        <!-- Put a picture named photo.jpg in the same folder as this file -->
-        <img src="photo.jpg" alt="A photo of me" width="200" />
+      <section>
+        <h2>About me</h2>
+        <div class="about">
+          <img src="photo.jpg" alt="A photo of me" />
+          <div>
+            <p>
+              I'm learning web development and enjoy turning an idea into a page
+              that looks good on every screen. So far I've learned HTML, CSS,
+              Flexbox, Grid and responsive design.
+            </p>
+            <p>
+              My next goal is JavaScript, so I can build websites that do more
+              than just display information.
+            </p>
+          </div>
+        </div>
       </section>
 
-      <hr />
-
-      <div class="card-row">
-        <section class="card">
-          <h2>My Hobbies</h2>
-          <ul>
-            <li>Reading</li>
-            <li>Cricket</li>
-            <li>Listening to music</li>
-          </ul>
-        </section>
-
-        <section class="card">
-          <h2>My Top 3 Movies</h2>
-          <ol>
-            <li>Movie one</li>
-            <li>Movie two</li>
-            <li>Movie three</li>
-          </ol>
-        </section>
-      </div>
-
-      <section class="card">
-        <h2>My Skills</h2>
-        <table border="1">
-          <caption>
-            What I'm learning
-          </caption>
-          <thead>
-            <tr>
-              <th>Skill</th>
-              <th>Level</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>HTML</td>
-              <td>Beginner</td>
-            </tr>
-            <tr>
-              <td>CSS</td>
-              <td>Just starting</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-
-      <section class="card">
-        <h2>My Projects</h2>
-        <div class="gallery">
-          <article class="project">
-            <div class="project-image">Image 1</div>
-            <h3>Project One</h3>
-            <p>A short description of this project.</p>
+      <section>
+        <h2>What I can do</h2>
+        <div class="cards">
+          <article>
+            <h3>Responsive websites</h3>
+            <p>Pages that look good on phones, tablets and laptops.</p>
           </article>
-          <article class="project">
-            <div class="project-image">Image 2</div>
-            <h3>Project Two</h3>
-            <p>A short description of this project.</p>
+          <article>
+            <h3>Clean layouts</h3>
+            <p>Neat, easy-to-read designs using Flexbox and Grid.</p>
           </article>
-          <article class="project">
-            <div class="project-image">Image 3</div>
-            <h3>Project Three</h3>
-            <p>A short description of this project.</p>
-          </article>
-          <article class="project">
-            <div class="project-image">Image 4</div>
-            <h3>Project Four</h3>
-            <p>A short description of this project.</p>
-          </article>
-          <article class="project">
-            <div class="project-image">Image 5</div>
-            <h3>Project Five</h3>
-            <p>A short description of this project.</p>
-          </article>
-          <article class="project">
-            <div class="project-image">Image 6</div>
-            <h3>Project Six</h3>
-            <p>A short description of this project.</p>
+          <article>
+            <h3>Contact forms</h3>
+            <p>Simple forms with clear labels and basic validation.</p>
           </article>
         </div>
       </section>
 
-      <section class="card">
-        <h2>Useful Links</h2>
+      <section>
+        <h2>Skills</h2>
+        <ul class="tags">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>Flexbox</li>
+          <li>CSS Grid</li>
+          <li>Responsive design</li>
+          <li>Browser DevTools</li>
+          <li>Git (learning)</li>
+          <li>JavaScript (learning)</li>
+        </ul>
+      </section>
+
+      <section id="projects">
+        <h2>Projects</h2>
+        <div class="cards">
+          <article>
+            <h3>Personal Portfolio</h3>
+            <p>This website. Built with HTML and CSS and fully responsive.</p>
+            <ul class="mini-tags">
+              <li>HTML</li>
+              <li>CSS</li>
+            </ul>
+            <a href="#">View project</a>
+          </article>
+          <article>
+            <h3>Landing Page</h3>
+            <p>
+              A one-page site for a small business with a clear call to action.
+            </p>
+            <ul class="mini-tags">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>Grid</li>
+            </ul>
+            <a href="#">View project</a>
+          </article>
+          <article>
+            <h3>Recipe Page</h3>
+            <p>
+              A recipe layout with images, lists and a clean reading experience.
+            </p>
+            <ul class="mini-tags">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>Flexbox</li>
+            </ul>
+            <a href="#">View project</a>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <h2>My learning journey</h2>
+        <ol class="timeline">
+          <li>
+            <strong>HTML basics</strong>
+            <span>Page structure, links, images, lists, tables and forms.</span>
+          </li>
+          <li>
+            <strong>CSS styling</strong>
+            <span>Colors, fonts, the box model, Flexbox and Grid.</span>
+          </li>
+          <li>
+            <strong>Responsive design</strong>
+            <span
+              >Media queries, relative units and testing on different
+              screens.</span
+            >
+          </li>
+          <li>
+            <strong>Next: JavaScript</strong>
+            <span>Making pages interactive and building real web apps.</span>
+          </li>
+        </ol>
+      </section>
+
+      <section>
+        <h2>Beyond code</h2>
         <p>
-          <a href="https://developer.mozilla.org">MDN Web Docs</a><br />
-          <a href="https://www.w3schools.com/html/">W3Schools HTML Tutorial</a>
+          When I'm not building websites, you'll find me reading, playing
+          cricket or listening to music.
         </p>
+      </section>
+
+      <section class="cta">
+        <h2>Let's work together</h2>
+        <p>
+          I'm open to internships, small projects and learning opportunities.
+        </p>
+        <a class="button" href="contact.html">Contact me</a>
       </section>
     </main>
 
     <footer>
-      <p>&copy; 2026 My Portfolio</p>
+      <ul class="social">
+        <li><a href="#">GitHub</a></li>
+        <li><a href="#">LinkedIn</a></li>
+        <li><a href="mailto:you@example.com">Email</a></li>
+      </ul>
+      <p>&copy; 2026 Your Name</p>
     </footer>
   </body>
 </html>

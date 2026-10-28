@@ -1,41 +1,31 @@
-/* ===== Day 3: CSS basics ===== */
+/* ===== Colors and basics ===== */
+:root {
+    --bg: #fafaf7;
+    --text: #222222;
+    --muted: #666666;
+    --accent: #0f766e;
+    --accent-light: #d9f0ed;
+    --border: #e3e3dc;
+}
 
-/* Applies to the whole page */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
+    margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.125rem;
-    /* 18px, but scales with the user's browser settings */
     line-height: 1.6;
-    color: #333333;
-    background-color: #f5f7fa;
+    color: var(--text);
+    background-color: var(--bg);
 }
 
-/* Headings */
-h1 {
-    color: #ffffff;
-    font-size: 32px;
-}
-
-h2 {
-    color: #1a3c6e;
-    font-size: 24px;
-}
-
-/* Header and footer */
-header {
-    background-color: #1a3c6e;
-    color: #ffffff;
-}
-
-footer {
-    background-color: #1a3c6e;
-    color: #ffffff;
-    text-align: center;
-}
-
-/* Links */
 a {
-    color: #1a73e8;
+    color: var(--accent);
     text-decoration: none;
 }
 
@@ -43,367 +33,290 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Navigation links sit on the dark header */
-nav a {
-    color: #ffffff;
-    font-weight: bold;
+h1,
+h2,
+h3 {
+    line-height: 1.2;
 }
 
-/* Class selector: apply to any element with class="highlight" */
-.highlight {
-    color: #d93025;
-    font-weight: bold;
-}
-
-/* ID selector: apply to the one element with id="intro" */
-#intro {
-    font-style: italic;
-}
-
-
-/* ===== Day 4: The box model ===== */
-
-/* Makes width include padding and border (much easier to work with) */
-* {
-    box-sizing: border-box;
-}
-
-/* Remove the browser's default page margin */
-body {
-    margin: 0;
-}
-
-/* Header and footer get breathing room inside */
-header {
-    padding: 20px 40px;
-}
-
-footer {
-    padding: 20px;
-    margin-top: 40px;
-}
-
-h1 {
-    margin: 0 0 10px 0;
-}
-
-/* Keep the content a readable width and centered */
-main {
-    max-width: 800px;
-    margin: 30px auto;
-    /* auto left/right = centered */
-    padding: 0 20px;
-}
-
-/* The card component */
-.card {
-    background-color: #ffffff;
-    border: 1px solid #dddddd;
-    border-radius: 10px;
-    padding: 24px;
-    margin-bottom: 24px;
-}
-
-.card h2 {
-    margin-top: 0;
-}
-
-/* Images */
-img {
-    border-radius: 50%;
-    /* makes a square photo a circle */
-    display: block;
-}
-
-/* Table */
-table {
-    border-collapse: collapse;
-    width: 100%;
-}
-
-th,
-td {
-    border: 1px solid #dddddd;
-    padding: 10px 14px;
-    text-align: left;
-}
-
-th {
-    background-color: #1a3c6e;
-    color: #ffffff;
-}
-
-/* Form fields */
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-select,
-textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #cccccc;
-    border-radius: 6px;
-    font-size: 16px;
-}
-
-fieldset {
-    border: 1px solid #cccccc;
-    border-radius: 6px;
-    padding: 12px 16px;
-    margin-bottom: 16px;
-}
-
-/* Button: an inline-block lets us set width, padding and margin */
-button {
-    display: inline-block;
-    background-color: #1a73e8;
-    color: #ffffff;
-    border: none;
-    border-radius: 6px;
-    padding: 12px 28px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-
-/* ===== Day 5: Flexbox ===== */
-
-/* Header: title on the left, nav on the right */
+/* ===== Header and footer ===== */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-header h1 {
-    margin: 0;
+.logo {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--text);
 }
 
-/* Nav: links in a row with a gap between them */
 nav {
     display: flex;
-    gap: 24px;
-}
-
-/* Row of cards: side by side, equal width, wrap when too narrow */
-.card-row {
-    display: flex;
-    gap: 24px;
-    flex-wrap: wrap;
-}
-
-.card-row .card {
-    flex: 1;
-    /* each card shares the row equally */
-    min-width: 250px;
-    /* wrap to a new line below this width */
-}
-
-
-/* ===== Day 6: CSS Grid ===== */
-
-/* Responsive gallery: as many 200px+ columns as fit, sharing space equally */
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 20px;
 }
 
-.project {
-    background-color: #f5f7fa;
-    border-radius: 8px;
-    padding: 12px;
-}
-
-.project h3 {
-    margin: 12px 0 6px 0;
-    color: #1a3c6e;
-}
-
-.project p {
-    margin: 0;
-    font-size: 16px;
-}
-
-/* Placeholder for a screenshot: replace with <img> later */
-.project-image {
-    aspect-ratio: 4 / 3;
-    background-color: #cfd8e6;
-    border-radius: 6px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #1a3c6e;
-    font-weight: bold;
-}
-
-/* Make the first project span two columns: a "featured" look */
-.project:first-child {
-    grid-column: span 2;
-}
-
-
-/* ===== Day 7: Polish (backgrounds, shadows, transitions, positioning) ===== */
-
-/* Sticky header: stays at the top while scrolling */
-header {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    /* stays above other content */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Hero section with a gradient background */
-.hero {
-    background: linear-gradient(135deg, #1a3c6e, #1a73e8);
-    color: #ffffff;
+footer {
     text-align: center;
-    padding: 60px 24px;
-    border-radius: 10px;
-    margin-bottom: 24px;
+    color: var(--muted);
+    padding: 30px 20px;
+    border-top: 1px solid var(--border);
 }
 
-.hero h2 {
-    color: #ffffff;
-    font-size: 36px;
-    margin: 0 0 10px 0;
+/* ===== Page layout ===== */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section {
+    padding: 30px 0;
+}
+
+/* ===== Home page ===== */
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
 }
 
 .hero p {
-    font-size: 20px;
-    margin: 0 0 24px 0;
+    font-size: 1.2rem;
+    color: var(--muted);
 }
 
-/* Reusable button style for links and <button> */
-.btn {
-    display: inline-block;
-    background-color: #ffffff;
-    color: #1a3c6e;
-    font-weight: bold;
-    padding: 12px 28px;
-    border-radius: 30px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.btn:hover {
-    text-decoration: none;
-    transform: translateY(-3px);
-    /* lifts up slightly */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
-}
-
-/* Smooth hover on the form button */
+.button,
 button {
-    transition: background-color 0.2s ease, transform 0.2s ease;
+    display: inline-block;
+    background-color: var(--accent);
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
 }
 
+.button:hover,
 button:hover {
-    background-color: #1558b0;
-    transform: translateY(-2px);
-}
-
-/* Cards: soft shadow, lift on hover */
-.card {
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
-}
-
-/* Project tiles: highlight on hover */
-.project {
-    transition: background-color 0.2s ease;
-}
-
-.project:hover {
-    background-color: #e3ecf9;
-}
-
-/* Smooth color change on nav links */
-nav a {
-    transition: opacity 0.2s ease;
-}
-
-nav a:hover {
-    opacity: 0.75;
+    opacity: 0.85;
     text-decoration: none;
 }
 
-
-/* ===== Day 8: Responsive design ===== */
-
-/* Images never overflow their container */
-img {
-    max-width: 100%;
-    height: auto;
+.about {
+    display: flex;
+    align-items: center;
+    gap: 24px;
 }
 
-/* Tablets and smaller (screens up to 768px wide) */
-@media (max-width: 768px) {
-    header {
-        padding: 16px 20px;
-    }
-
-    h1 {
-        font-size: 1.5rem;
-    }
-
-    .hero {
-        padding: 40px 20px;
-    }
-
-    .hero h2 {
-        font-size: 1.75rem;
-    }
-
-    .hero p {
-        font-size: 1.1rem;
-    }
-
-    .card {
-        padding: 18px;
-    }
-
-    /* Featured project goes back to one column wide */
-    .project:first-child {
-        grid-column: span 1;
-    }
+.about img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
-/* Phones (screens up to 480px wide) */
-@media (max-width: 480px) {
+.tags {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
 
-    /* Stack the header: title on top, nav below */
-    header {
+.tags li {
+    background-color: var(--accent-light);
+    color: var(--accent);
+    padding: 6px 14px;
+    border-radius: 20px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.cards article {
+    background-color: white;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.cards h3 {
+    margin-top: 0;
+}
+
+.cards p {
+    margin-top: 0;
+}
+
+.mini-tags {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 12px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.mini-tags li {
+    font-size: 0.8rem;
+    color: var(--muted);
+    border: 1px solid var(--border);
+    padding: 2px 10px;
+    border-radius: 20px;
+}
+
+.small-label {
+    color: var(--accent);
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.button-outline {
+    background-color: transparent;
+    color: var(--accent);
+    border: 2px solid var(--accent);
+    margin-left: 10px;
+}
+
+.timeline {
+    list-style: none;
+    padding: 0 0 0 20px;
+    border-left: 3px solid var(--accent-light);
+}
+
+.timeline li {
+    margin-bottom: 18px;
+}
+
+.timeline strong,
+.timeline span {
+    display: block;
+}
+
+.timeline span {
+    color: var(--muted);
+}
+
+.cta {
+    background-color: var(--accent-light);
+    border-radius: 10px;
+    padding: 40px 24px;
+    margin: 30px 0;
+    text-align: center;
+}
+
+.cta h2 {
+    margin-top: 0;
+}
+
+/* ===== Contact form ===== */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 500px;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+input,
+textarea {
+    padding: 10px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+input:focus,
+textarea:focus {
+    outline: 2px solid var(--accent);
+}
+
+form button {
+    margin-top: 16px;
+    align-self: flex-start;
+}
+
+/* ===== Contact page layout ===== */
+.contact-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+select {
+    padding: 10px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: inherit;
+    background-color: white;
+}
+
+.details {
+    background-color: white;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 20px;
+    align-self: start;
+}
+
+.details h2 {
+    margin-top: 0;
+    font-size: 1.2rem;
+}
+
+.details h3 {
+    font-size: 1rem;
+    margin-bottom: 6px;
+}
+
+.social-list {
+    padding-left: 20px;
+    margin: 0;
+}
+
+/* ===== Footer links ===== */
+.social {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 12px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* ===== Phones ===== */
+@media (max-width: 600px) {
+    .about {
         flex-direction: column;
-        gap: 10px;
+        text-align: center;
     }
 
-    /* Gallery becomes a single column */
-    .gallery {
+    .cards,
+    .contact-layout {
         grid-template-columns: 1fr;
     }
 
-    /* Cards in the row stack vertically */
-    .card-row {
-        flex-direction: column;
+    .button-outline {
+        margin-left: 0;
+        margin-top: 10px;
     }
 
-    /* Table scrolls sideways instead of breaking the page */
-    table {
-        display: block;
-        overflow-x: auto;
-    }
-
-    /* Easier to tap */
-    button,
-    .btn {
-        width: 100%;
-        text-align: center;
+    .hero h1 {
+        font-size: 2rem;
     }
 }

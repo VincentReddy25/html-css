@@ -3,95 +3,82 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact | My Portfolio</title>
+    <title>Contact | Your Name</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
-      <h1>My Portfolio</h1>
+      <a class="logo" href="index.html">Your Name</a>
       <nav>
         <a href="index.html">Home</a>
+        <a href="index.html#projects">Projects</a>
         <a href="contact.html">Contact</a>
       </nav>
     </header>
 
     <main>
-      <section class="card">
-        <h2>Contact Me</h2>
+      <section>
+        <h1>Contact me</h1>
         <p>
-          Have a project in mind or just want to say hello? Send me a message.
+          Have a project, an opportunity or just a question? Send me a message
+          and I'll get back to you.
         </p>
 
-        <form action="#" method="post">
-          <p>
-            <label for="name">Full name:</label><br />
-            <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Your name"
-              required
-            />
-          </p>
+        <div class="contact-layout">
+          <form action="#" method="post">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required />
 
-          <p>
-            <label for="email">Email:</label><br />
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="you@example.com"
-              required
-            />
-          </p>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
 
-          <p>
-            <label for="phone">Phone (optional):</label><br />
-            <input type="tel" id="phone" name="phone" />
-          </p>
-
-          <p>
-            <label for="topic">What is this about?</label><br />
+            <label for="topic">What is this about?</label>
             <select id="topic" name="topic">
-              <option value="project">Project inquiry</option>
-              <option value="job">Job opportunity</option>
-              <option value="feedback">Feedback</option>
-              <option value="other">Something else</option>
+              <option>Project inquiry</option>
+              <option>Internship or job</option>
+              <option>Feedback</option>
+              <option>Something else</option>
             </select>
-          </p>
 
-          <fieldset>
-            <legend>How should I reply?</legend>
-            <input
-              type="radio"
-              id="reply-email"
-              name="reply"
-              value="email"
-              checked
-            />
-            <label for="reply-email">Email</label>
-            <input type="radio" id="reply-phone" name="reply" value="phone" />
-            <label for="reply-phone">Phone</label>
-          </fieldset>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
 
-          <p>
-            <label for="message">Message:</label><br />
-            <textarea
-              id="message"
-              name="message"
-              rows="5"
-              cols="40"
-              required
-            ></textarea>
-          </p>
+            <button type="submit">Send message</button>
+          </form>
 
-          <button type="submit">Send Message</button>
-        </form>
+          <aside class="details">
+            <h2>Contact details</h2>
+            <p>
+              <strong>Email</strong><br /><a href="mailto:you@example.com"
+                >you@example.com</a
+              >
+            </p>
+            <p><strong>Location</strong><br />Hyderabad, India</p>
+            <p>
+              <strong>Availability</strong><br />Open to internships and small
+              projects
+            </p>
+            <p>
+              <strong>Response time</strong><br />Usually within 1 to 2 days
+            </p>
+
+            <h3>Find me online</h3>
+            <ul class="social-list">
+              <li><a href="#">GitHub</a></li>
+              <li><a href="#">LinkedIn</a></li>
+            </ul>
+          </aside>
+        </div>
       </section>
     </main>
 
     <footer>
-      <p>&copy; 2026 My Portfolio</p>
+      <ul class="social">
+        <li><a href="#">GitHub</a></li>
+        <li><a href="#">LinkedIn</a></li>
+        <li><a href="mailto:you@example.com">Email</a></li>
+      </ul>
+      <p>&copy; 2026 Your Name</p>
     </footer>
   </body>
 </html>
