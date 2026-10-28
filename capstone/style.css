@@ -1,0 +1,60 @@
+/* ===== Day 3: CSS basics ===== */
+
+/* Applies to the whole page */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333333;
+    background-color: #f5f7fa;
+}
+
+/* Headings */
+h1 {
+    color: #ffffff;
+    font-size: 32px;
+}
+
+h2 {
+    color: #1a3c6e;
+    font-size: 24px;
+}
+
+/* Header and footer */
+header {
+    background-color: #1a3c6e;
+    color: #ffffff;
+}
+
+footer {
+    background-color: #1a3c6e;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* Links */
+a {
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Navigation links sit on the dark header */
+nav a {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* Class selector: apply to any element with class="highlight" */
+.highlight {
+    color: #d93025;
+    font-weight: bold;
+}
+
+/* ID selector: apply to the one element with id="intro" */
+#intro {
+    font-style: italic;
+}
