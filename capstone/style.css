@@ -58,3 +58,108 @@ nav a {
 #intro {
     font-style: italic;
 }
+
+
+/* ===== Day 4: The box model ===== */
+
+/* Makes width include padding and border (much easier to work with) */
+* {
+    box-sizing: border-box;
+}
+
+/* Remove the browser's default page margin */
+body {
+    margin: 0;
+}
+
+/* Header and footer get breathing room inside */
+header {
+    padding: 20px 40px;
+}
+
+footer {
+    padding: 20px;
+    margin-top: 40px;
+}
+
+h1 {
+    margin: 0 0 10px 0;
+}
+
+/* Keep the content a readable width and centered */
+main {
+    max-width: 800px;
+    margin: 30px auto;
+    /* auto left/right = centered */
+    padding: 0 20px;
+}
+
+/* The card component */
+.card {
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    padding: 24px;
+    margin-bottom: 24px;
+}
+
+.card h2 {
+    margin-top: 0;
+}
+
+/* Images */
+img {
+    border-radius: 50%;
+    /* makes a square photo a circle */
+    display: block;
+}
+
+/* Table */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,
+td {
+    border: 1px solid #dddddd;
+    padding: 10px 14px;
+    text-align: left;
+}
+
+th {
+    background-color: #1a3c6e;
+    color: #ffffff;
+}
+
+/* Form fields */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+fieldset {
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    padding: 12px 16px;
+    margin-bottom: 16px;
+}
+
+/* Button: an inline-block lets us set width, padding and margin */
+button {
+    display: inline-block;
+    background-color: #1a73e8;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 28px;
+    font-size: 16px;
+    cursor: pointer;
+}
